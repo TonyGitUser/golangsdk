@@ -102,7 +102,7 @@ func V3EndpointURL(catalog *tokens3.ServiceCatalog, opts golangsdk.EndpointOpts)
 					return "", err
 				}
 				if (opts.Availability == golangsdk.Availability(endpoint.Interface)) &&
-					(opts.Region == "" || endpoint.Region == opts.Region) {
+					(opts.Region == "" || (endpoint.Region == "*"  || strings.TrimSpace(endpoint.Region) == "" )|| endpoint.Region == opts.Region) {
 					endpoints = append(endpoints, endpoint)
 				}
 			}
