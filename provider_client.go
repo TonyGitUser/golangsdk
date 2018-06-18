@@ -3,12 +3,13 @@ package golangsdk
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/huaweicloud/golangsdk/akskSigner"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"strings"
 	"sync"
+
+	"github.com/huaweicloud/golangsdk/akskSigner"
 )
 
 // DefaultUserAgent is the default User-Agent string set in the request header.
