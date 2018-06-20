@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/huaweicloud/golangsdk"
 	"strings"
+
+	"github.com/huaweicloud/golangsdk"
 )
 
 // LinkedPageBase may be embedded to implement a page that provides navigational "Next" and "Previous" links within its result.
