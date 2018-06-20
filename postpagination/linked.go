@@ -5,6 +5,7 @@ import (
 	"reflect"
 
 	"github.com/huaweicloud/golangsdk"
+	"strings"
 )
 
 // LinkedPageBase may be embedded to implement a page that provides navigational "Next" and "Previous" links within its result.
@@ -62,14 +63,39 @@ func (current LinkedPageBase) NextPageURL() (string, error) {
 			}
 
 			url, ok := value.(string)
-			if !ok {
-				err := golangsdk.ErrUnexpectedType{}
-				err.Expected = "string"
-				err.Actual = fmt.Sprintf("%v", reflect.TypeOf(value))
-				return "", err
+			if ok {
+				return url, nil
 			}
 
-			return url, nil
+			links, ok := value.([]interface{})
+			if ok {
+				for _, v := range links {
+					linkObj, ok := v.(map[string]interface{})
+					if !ok {
+						return "", nil
+					}
+					rel, ok := linkObj["rel"]
+					if ok && rel == "next" {
+						url, ok = linkObj["href"].(string)
+						if !ok {
+							return "", nil
+						}
+					}
+				}
+
+				if url != "" {
+					//TODO I think it should be a issue....
+					url = strings.Replace(url, "None", current.Host, -1)
+					return url, nil
+				} else {
+					return "", nil
+				}
+			}
+
+			err := golangsdk.ErrUnexpectedType{}
+			err.Expected = "string"
+			err.Actual = fmt.Sprintf("%v", reflect.TypeOf(value))
+			return "", err
 		}
 	}
 }
