@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/testhelper/client"
+	"github.com/huaweicloud/golangsdk/testhelper/client"
 	"github.com/huaweicloud/golangsdk/openstack/vpc/v2.0/securitygrouprules"
 
 	th "github.com/huaweicloud/golangsdk/testhelper"
