@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/huaweicloud/golangsdk/testhelper/client"
 	"github.com/huaweicloud/golangsdk/openstack/vpc/v2.0/securitygroups"
+	"github.com/huaweicloud/golangsdk/testhelper/client"
 
 	th "github.com/huaweicloud/golangsdk/testhelper"
 )

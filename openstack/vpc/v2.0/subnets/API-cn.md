@@ -1,5 +1,5 @@
 # Package antiddos
-    import "github.com/huaweicloudsdk/golangsdk/openstack/vpc/v2.0/subnets"
+    import "github.com/huaweicloud/golangsdk/openstack/vpc/v2.0/subnets"
 **[概述](#概述)**  
 
 **[目录](#目录)**  

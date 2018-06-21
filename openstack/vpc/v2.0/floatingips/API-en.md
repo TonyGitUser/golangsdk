@@ -1,5 +1,5 @@
 # Package antiddos
-    import "github.com/huaweicloudsdk/golangsdk/openstack/vpc/v2.0/floatingips"
+    import "github.com/huaweicloud/golangsdk/openstack/vpc/v2.0/floatingips"
 **[Overview](#overview)**  
 
 **[Index](#index)**  

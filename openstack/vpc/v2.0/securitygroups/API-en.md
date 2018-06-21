@@ -1,5 +1,5 @@
 # Package antiddos
-    import "github.com/huaweicloudsdk/golangsdk/openstack/vpc/v2.0/securitygroups"
+    import "github.com/huaweicloud/golangsdk/openstack/vpc/v2.0/securitygroups"
 **[Overview](#overview)**  
 
 **[Index](#index)**  
