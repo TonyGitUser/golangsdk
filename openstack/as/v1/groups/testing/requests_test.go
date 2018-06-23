@@ -15,20 +15,20 @@ func TestCreate(t *testing.T) {
 
 	tenantId := "57e98940a77f4bb988a21a7d0603a626"
 	actual, err := groups.Create(client.ServiceClient(), tenantId, groups.CreateOpts{
-		HealthPeriodicAuditMethod: "NOVA_AUDIT",
-		ScalingGroupName:          "as-group-Test",
-		ScalingConfigurationId:    "f109bb4f-09f0-4dac-9115-6b429d548750",
 		DesireInstanceNumber:      0,
 		MinInstanceNumber:         0,
 		MaxInstanceNumber:         1,
 		CoolDownTime:              900,
-		LbListenerId:              "",
-		VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
 		HealthPeriodicAuditTime:   5,
+		LbListenerId:              "",
+		HealthPeriodicAuditMethod: "NOVA_AUDIT",
+		ScalingGroupName:          "as-group-Test",
 		InstanceTerminatePolicy:   "OLD_CONFIG_OLD_INSTANCE",
-		Notifications:             []string{},
-		DeletePublicip:            true,
-		AvailableZones:            []string{"cn-north-1a"},
+		ScalingConfigurationId:    "f109bb4f-09f0-4dac-9115-6b429d548750",
+		VpcId:          "773c3c42-d315-417b-9063-87091713148c",
+		Notifications:  []string{},
+		DeletePublicip: true,
+		AvailableZones: []string{"cn-north-1a"},
 		Networks: []struct {
 			// Specifies the network ID.
 			Id string `json:"id,omitempty"`
