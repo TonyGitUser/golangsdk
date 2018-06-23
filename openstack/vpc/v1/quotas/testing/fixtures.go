@@ -26,7 +26,7 @@ var ListOutput = `
 
 var ListResponse = quotas.ListResponse{
 	Quotas: quotas.Quota{
-		[]quotas.Resource{
+		Resources: []quotas.Resource{
 			{
 				Type:  "vpc",
 				Used:  3,
