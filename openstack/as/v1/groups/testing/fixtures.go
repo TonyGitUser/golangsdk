@@ -84,6 +84,7 @@ var GetOutput = `
 `
 var GetResponse = groups.GetResponse{
 	ScalingGroup: groups.ScalingGroup{
+		HealthPeriodicAuditMethod: "NOVA_AUDIT",
 		ScalingGroupName:          "as-group-matt",
 		ScalingGroupId:            "e4a97959-34d0-4c58-ab85-1dda4d0b9d11",
 		ScalingGroupStatus:        "INSERVICE",
@@ -99,7 +100,6 @@ var GetResponse = groups.GetResponse{
 		CreateTime:                "2018-05-09T16:12:57Z",
 		VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
 		Detail:                    "",
-		HealthPeriodicAuditMethod: "NOVA_AUDIT",
 		HealthPeriodicAuditTime:   5,
 		InstanceTerminatePolicy:   "OLD_CONFIG_OLD_INSTANCE",
 		IsScaling:                 false,
@@ -207,6 +207,7 @@ var ListResponse = groups.ListResponse{
 	Limit:       2,
 	ScalingGroups: []groups.ScalingGroup{
 		{
+			HealthPeriodicAuditMethod: "NOVA_AUDIT",
 			ScalingGroupName:          "as-group-Test",
 			ScalingGroupId:            "60dcec94-5d5b-4dbf-9f50-4ccd7d841432",
 			ScalingGroupStatus:        "PAUSED",
@@ -222,7 +223,6 @@ var ListResponse = groups.ListResponse{
 			CreateTime:                "2018-05-10T17:22:54Z",
 			VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
 			Detail:                    "",
-			HealthPeriodicAuditMethod: "NOVA_AUDIT",
 			HealthPeriodicAuditTime:   5,
 			InstanceTerminatePolicy:   "OLD_CONFIG_OLD_INSTANCE",
 			IsScaling:                 false,
@@ -245,6 +245,7 @@ var ListResponse = groups.ListResponse{
 			},
 		},
 		{
+			HealthPeriodicAuditMethod: "NOVA_AUDIT",
 			ScalingGroupName:          "as-group-matt",
 			ScalingGroupId:            "e4a97959-34d0-4c58-ab85-1dda4d0b9d11",
 			ScalingGroupStatus:        "INSERVICE",
@@ -260,7 +261,6 @@ var ListResponse = groups.ListResponse{
 			CreateTime:                "2018-05-09T16:12:57Z",
 			VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
 			Detail:                    "",
-			HealthPeriodicAuditMethod: "NOVA_AUDIT",
 			HealthPeriodicAuditTime:   5,
 			InstanceTerminatePolicy:   "OLD_CONFIG_OLD_INSTANCE",
 			IsScaling:                 false,
