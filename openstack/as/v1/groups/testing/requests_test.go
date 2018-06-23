@@ -35,7 +35,7 @@ func TestCreate(t *testing.T) {
 		}{
 			{Id: "7844d4b4-d78f-45dc-9465-2b4d1bca83a5"},
 		},
-		VpcId: "773c3c42-d315-417b-9063-87091713148c",
+		VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
 		HealthPeriodicAuditMethod: "NOVA_AUDIT",
 		HealthPeriodicAuditTime:   5,
 		InstanceTerminatePolicy:   "OLD_CONFIG_OLD_INSTANCE",

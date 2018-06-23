@@ -84,32 +84,18 @@ var GetOutput = `
 `
 var GetResponse = groups.GetResponse{
 	ScalingGroup: groups.ScalingGroup{
-		ScalingGroupName:         "as-group-matt",
-		ScalingGroupId:           "e4a97959-34d0-4c58-ab85-1dda4d0b9d11",
-		ScalingGroupStatus:       "INSERVICE",
-		ScalingConfigurationId:   "f109bb4f-09f0-4dac-9115-6b429d548750",
-		ScalingConfigurationName: "as-config-sh2u",
-		CurrentInstanceNumber:    0,
-		DesireInstanceNumber:     0,
-		MinInstanceNumber:        0,
-		MaxInstanceNumber:        1,
-		CoolDownTime:             900,
-		LbListenerId:             "",
-		LbaasListeners:           []string{},
-		Networks: []struct {
-			// Specifies the network ID.
-			Id string `json:"id,omitempty"`
-		}{
-			{Id: "f6a0db7b-397c-4162-bc35-9a1f008b4373"},
-		},
-		CloudLocationId: "",
-		AvailableZones:  []string{"cn-north-1a"},
-		SecurityGroups: []struct {
-			// Specifies the ID of the security group.
-			Id string `json:"id,omitempty"`
-		}{
-			{Id: "7844d4b4-d78f-45dc-9465-2b4d1bca83a5"},
-		},
+		ScalingGroupName:          "as-group-matt",
+		ScalingGroupId:            "e4a97959-34d0-4c58-ab85-1dda4d0b9d11",
+		ScalingGroupStatus:        "INSERVICE",
+		ScalingConfigurationId:    "f109bb4f-09f0-4dac-9115-6b429d548750",
+		ScalingConfigurationName:  "as-config-sh2u",
+		CurrentInstanceNumber:     0,
+		DesireInstanceNumber:      0,
+		MinInstanceNumber:         0,
+		MaxInstanceNumber:         1,
+		CoolDownTime:              900,
+		LbListenerId:              "",
+		LbaasListeners:            []string{},
 		CreateTime:                "2018-05-09T16:12:57Z",
 		VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
 		Detail:                    "",
@@ -119,6 +105,20 @@ var GetResponse = groups.GetResponse{
 		IsScaling:                 false,
 		Notifications:             []string{},
 		DeletePublicip:            true,
+		CloudLocationId:           "",
+		AvailableZones:            []string{"cn-north-1a"},
+		Networks: []struct {
+			// Specifies the network ID.
+			Id string `json:"id,omitempty"`
+		}{
+			{Id: "f6a0db7b-397c-4162-bc35-9a1f008b4373"},
+		},
+		SecurityGroups: []struct {
+			// Specifies the ID of the security group.
+			Id string `json:"id,omitempty"`
+		}{
+			{Id: "7844d4b4-d78f-45dc-9465-2b4d1bca83a5"},
+		},
 	},
 }
 
@@ -207,32 +207,18 @@ var ListResponse = groups.ListResponse{
 	Limit:       2,
 	ScalingGroups: []groups.ScalingGroup{
 		{
-			ScalingGroupName:         "as-group-Test",
-			ScalingGroupId:           "60dcec94-5d5b-4dbf-9f50-4ccd7d841432",
-			ScalingGroupStatus:       "PAUSED",
-			ScalingConfigurationId:   "f109bb4f-09f0-4dac-9115-6b429d548750",
-			ScalingConfigurationName: "as-config-sh2u",
-			CurrentInstanceNumber:    0,
-			DesireInstanceNumber:     0,
-			MinInstanceNumber:        0,
-			MaxInstanceNumber:        1,
-			CoolDownTime:             900,
-			LbListenerId:             "",
-			LbaasListeners:           []string{},
-			Networks: []struct {
-				// Specifies the network ID.
-				Id string `json:"id,omitempty"`
-			}{
-				{Id: "f6a0db7b-397c-4162-bc35-9a1f008b4373"},
-			},
-			CloudLocationId: "",
-			AvailableZones:  []string{"cn-north-1a"},
-			SecurityGroups: []struct {
-				// Specifies the ID of the security group.
-				Id string `json:"id,omitempty"`
-			}{
-				{Id: "7844d4b4-d78f-45dc-9465-2b4d1bca83a5"},
-			},
+			ScalingGroupName:          "as-group-Test",
+			ScalingGroupId:            "60dcec94-5d5b-4dbf-9f50-4ccd7d841432",
+			ScalingGroupStatus:        "PAUSED",
+			ScalingConfigurationId:    "f109bb4f-09f0-4dac-9115-6b429d548750",
+			ScalingConfigurationName:  "as-config-sh2u",
+			CurrentInstanceNumber:     0,
+			DesireInstanceNumber:      0,
+			MinInstanceNumber:         0,
+			MaxInstanceNumber:         1,
+			CoolDownTime:              900,
+			LbListenerId:              "",
+			LbaasListeners:            []string{},
 			CreateTime:                "2018-05-10T17:22:54Z",
 			VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
 			Detail:                    "",
@@ -242,34 +228,35 @@ var ListResponse = groups.ListResponse{
 			IsScaling:                 false,
 			Notifications:             []string{},
 			DeletePublicip:            true,
-		},
-		{
-			ScalingGroupName:         "as-group-matt",
-			ScalingGroupId:           "e4a97959-34d0-4c58-ab85-1dda4d0b9d11",
-			ScalingGroupStatus:       "INSERVICE",
-			ScalingConfigurationId:   "f109bb4f-09f0-4dac-9115-6b429d548750",
-			ScalingConfigurationName: "as-config-sh2u",
-			CurrentInstanceNumber:    0,
-			DesireInstanceNumber:     0,
-			MinInstanceNumber:        0,
-			MaxInstanceNumber:        1,
-			CoolDownTime:             900,
-			LbListenerId:             "",
-			LbaasListeners:           []string{},
+			CloudLocationId:           "",
+			AvailableZones:            []string{"cn-north-1a"},
 			Networks: []struct {
 				// Specifies the network ID.
 				Id string `json:"id,omitempty"`
 			}{
 				{Id: "f6a0db7b-397c-4162-bc35-9a1f008b4373"},
 			},
-			CloudLocationId: "",
-			AvailableZones:  []string{"cn-north-1a"},
+
 			SecurityGroups: []struct {
 				// Specifies the ID of the security group.
 				Id string `json:"id,omitempty"`
 			}{
 				{Id: "7844d4b4-d78f-45dc-9465-2b4d1bca83a5"},
 			},
+		},
+		{
+			ScalingGroupName:          "as-group-matt",
+			ScalingGroupId:            "e4a97959-34d0-4c58-ab85-1dda4d0b9d11",
+			ScalingGroupStatus:        "INSERVICE",
+			ScalingConfigurationId:    "f109bb4f-09f0-4dac-9115-6b429d548750",
+			ScalingConfigurationName:  "as-config-sh2u",
+			CurrentInstanceNumber:     0,
+			DesireInstanceNumber:      0,
+			MinInstanceNumber:         0,
+			MaxInstanceNumber:         1,
+			CoolDownTime:              900,
+			LbListenerId:              "",
+			LbaasListeners:            []string{},
 			CreateTime:                "2018-05-09T16:12:57Z",
 			VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
 			Detail:                    "",
@@ -279,6 +266,20 @@ var ListResponse = groups.ListResponse{
 			IsScaling:                 false,
 			Notifications:             []string{},
 			DeletePublicip:            true,
+			CloudLocationId:           "",
+			AvailableZones:            []string{"cn-north-1a"},
+			Networks: []struct {
+				// Specifies the network ID.
+				Id string `json:"id,omitempty"`
+			}{
+				{Id: "f6a0db7b-397c-4162-bc35-9a1f008b4373"},
+			},
+			SecurityGroups: []struct {
+				// Specifies the ID of the security group.
+				Id string `json:"id,omitempty"`
+			}{
+				{Id: "7844d4b4-d78f-45dc-9465-2b4d1bca83a5"},
+			},
 		},
 	},
 }
