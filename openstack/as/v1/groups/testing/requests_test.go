@@ -15,6 +15,7 @@ func TestCreate(t *testing.T) {
 
 	tenantId := "57e98940a77f4bb988a21a7d0603a626"
 	actual, err := groups.Create(client.ServiceClient(), tenantId, groups.CreateOpts{
+		HealthPeriodicAuditMethod: "NOVA_AUDIT",
 		ScalingGroupName:          "as-group-Test",
 		ScalingConfigurationId:    "f109bb4f-09f0-4dac-9115-6b429d548750",
 		DesireInstanceNumber:      0,
@@ -23,7 +24,6 @@ func TestCreate(t *testing.T) {
 		CoolDownTime:              900,
 		LbListenerId:              "",
 		VpcId:                     "773c3c42-d315-417b-9063-87091713148c",
-		HealthPeriodicAuditMethod: "NOVA_AUDIT",
 		HealthPeriodicAuditTime:   5,
 		InstanceTerminatePolicy:   "OLD_CONFIG_OLD_INSTANCE",
 		Notifications:             []string{},
